@@ -4,7 +4,7 @@ metadata:
   name: helloworld-ingress
 spec:
   rules:
-  - host: helloworld.example.com
+  - host: helloworld.code.in.th
     http:
       paths:
       - pathType: Prefix
