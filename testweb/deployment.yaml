@@ -24,23 +24,4 @@ spec:
           mountPath: /usr/share/nginx/html
       volumes:
       - name: html
-        configMap:
-          name: html-files
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: html-files
-data:
-  index.html: |
-    <html>
-    <body>
-    <h1>Hello, World!</h1>
-    </body>
-    </html>
-  test.txt: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mi tortor, fermentum id ante et, ornare condimentum sapien. Pellentesque facilisis diam at nunc vestibulum, vel tristique magna fringilla. Sed ultrices massa consequat augue pellentesque accumsan. Ut convallis turpis cursus, gravida est id, consectetur sapien. Nulla facilisi. Sed commodo leo non elit vestibulum tincidunt. Integer sagittis ipsum dictum, malesuada nunc quis, lobortis orci. Curabitur ut consequat sem. In ut nisl efficitur, tempor odio quis, vulputate magna. Sed egestas scelerisque nibh ac placerat. Ut eu tellus at enim mattis consectetur.
-    Fusce vulputate purus velit, id pulvinar mauris dapibus id. Maecenas purus ligula, vestibulum in nunc porttitor, tristique porttitor enim. Praesent tortor elit, tristique eget molestie vitae, vehicula in nisl. Aenean id semper nisl. Praesent id augue nec eros fringilla laoreet. Vivamus fringilla volutpat feugiat. Proin lobortis odio metus, mattis convallis leo feugiat vel. Aliquam tincidunt finibus diam, ac sagittis ex imperdiet non. Vestibulum sit amet felis vitae arcu consectetur mollis vitae sed nulla. In gravida nibh semper neque iaculis, id tempor purus dignissim. Vestibulum sed orci id erat condimentum pharetra. Pellentesque malesuada erat dui, varius consectetur enim vehicula quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    Quisque consequat bibendum posuere. Suspendisse in augue id purus malesuada auctor id porttitor metus. Nam non ex rutrum, imperdiet lorem quis, accumsan diam. Morbi aliquet, velit ut tincidunt hendrerit, purus elit consequat mi, non convallis metus tellus non felis. Nunc tempus odio nec est fringilla cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultricies molestie mi eget gravida. Pellentesque diam augue, vestibulum sed tempus nec, gravida et lacus. Fusce hendrerit leo rhoncus nisl dictum tincidunt. Pellentesque ac orci a lectus posuere varius. Maecenas lobortis sit amet ante ac faucibus. Pellentesque vitae fringilla mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum massa sed metus pretium, vel dapibus arcu volutpat. Nunc ac est magna.
-    Nulla mattis felis ac nisi rhoncus sagittis. Donec placerat scelerisque ex, nec malesuada mauris tincidunt eget. Morbi eu pharetra velit, et vestibulum neque. In et malesuada mi. Nulla libero ipsum, aliquam vitae rutrum ut, scelerisque non orci. Sed blandit leo nec nunc egestas, vitae dapibus sapien viverra. Vestibulum blandit enim non mauris fermentum efficitur. Phasellus ac enim non lorem tempor commodo.
-    Integer vel bibendum nisl. Etiam rutrum eu tortor euismod vehicula. Vivamus eu volutpat felis, non posuere nisl. Donec placerat blandit libero. Aenean dapibus, ligula at scelerisque fringilla, enim libero luctus urna, quis ullamcorper quam leo id erat. Phasellus diam odio, fringilla id tincidunt sed, tristique ac lectus. Praesent magna dui, sodales eget metus sed, semper molestie risus. Integer pellentesque ac turpis eu auctor.
+        emptyDir: {}
